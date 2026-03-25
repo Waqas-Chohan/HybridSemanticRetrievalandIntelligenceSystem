@@ -6,11 +6,13 @@ A multi-stage NLP pipeline that searches ~8,470 customer-support tickets using a
 
 ---
 
-## 🌐 Live Demo
+## 🧪 Execution Platform
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-link-here.streamlit.app)
+This assignment notebook is executed on **Kaggle**.
 
-> *Replace the link above with your deployed Streamlit Cloud or HuggingFace Spaces URL.*
+- Dataset is attached through Kaggle **Add Input**
+- GPU is enabled directly from Kaggle notebook settings
+- Notebook runs end-to-end on Kaggle without local dataset setup
 
 ---
 
@@ -42,64 +44,26 @@ A pure keyword system might miss it because the ticket database says *"refund re
 ```
 assignment03/
 │
-├── DS_ASS_03_23F_3041_&_23F_3026.ipynb   ← Main Kaggle notebook (do not modify)
-├── streamlit_app.py                        ← Interactive web app
-├── requirements.txt                        ← Python dependencies
-├── customer_support_tickets.csv            ← Dataset (place here before running)
-├── glove_cache/                            ← Auto-created on first run (GloVe download)
-└── README.md                               ← You are here
+├── DS_ASS_03_23F_3041_&_23F_3026.ipynb   ← Main Kaggle notebook
+└── README.md
 ```
 
 ---
 
-## 🚀 Running Locally
+## 🚀 Running on Kaggle
 
-### 1. Clone the repo
-```bash
-git clone https://github.com/<your-username>/DS_ASS_03_23F.git
-cd DS_ASS_03_23F
-```
+### 1. Open the notebook on Kaggle
+Upload or import `DS_ASS_03_23F_3041_&_23F_3026.ipynb` into Kaggle Notebooks.
 
-### 2. Get the dataset
-Download `customer_support_tickets.csv` from
+### 2. Add dataset input
+Use **Add Input** in Kaggle and attach:
 [Kaggle — Customer Support Ticket Dataset](https://www.kaggle.com/datasets/waseemalastal/customer-support-ticket-dataset)
-and place it in the project folder.
 
-### 3. Install dependencies
-```bash
-pip install -r requirements.txt
-```
+### 3. Enable GPU
+In notebook settings, set **Accelerator = GPU**.
 
-### 4. Launch the app
-```bash
-streamlit run streamlit_app.py
-```
-
-> ⏳ **First launch only:** The app will automatically download the GloVe embeddings file (~350 MB) from Stanford NLP and cache it in `glove_cache/`. This takes 2–5 minutes. Every run after that starts in ~10–20 seconds.
-
----
-
-## ☁️ Deploying to Streamlit Cloud (Free)
-
-1. Push this repo (including `customer_support_tickets.csv`) to GitHub.
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
-3. Click **"New app"** → select your repo → set main file to `streamlit_app.py`.
-4. Click **Deploy**. Done!
-
-> ⚠️ Streamlit Cloud has a 1 GB file-size limit per repo. The CSV is ~1.2 MB (fine). GloVe is downloaded at runtime, not stored in the repo.
-
----
-
-## 🖥️ App Features
-
-| Feature | Description |
-|---------|-------------|
-| 📝 **Query box** | Describe your issue in plain English |
-| 🎚️ **Alpha slider** | Slide from 0.0 (pure AI) to 1.0 (pure keyword) |
-| 🔀 **Hybrid results** | Top-3 tickets scored by the blended formula |
-| 📊 **TF-IDF column** | Keyword-match perspective |
-| 🧠 **GloVe column** | Semantic/meaning perspective |
-| 🔮 **Type prediction** | Predicted ticket type shown at the top |
+### 4. Run all cells
+Execute the notebook from top to bottom on Kaggle.
 
 ---
 
@@ -142,10 +106,7 @@ Here are real examples where GloVe understood intent that TF-IDF missed:
 ## 📋 Assignment Checklist
 
 - [x] Kaggle Notebook (dual T4 GPU)
-- [x] GitHub Repository ← *you're here*
-- [ ] [Medium Article](https://medium.com/) ← *add your link*
-- [ ] [LinkedIn Post](https://linkedin.com/) ← *add your link*
-- [ ] [Live App Link](https://streamlit.io/) ← *add after deploying*
+- [x] GitHub Repository
 
 ---
 
@@ -153,8 +114,8 @@ Here are real examples where GloVe understood intent that TF-IDF missed:
 
 | Name | Roll No. |
 |------|----------|
-| *[Your Name]* | 23F-3041 |
-| *[Your Name]* | 23F-3026 |
+| Muhammad Taqi | 23F-3026 |
+| Waqas Chohan | 23F-3041 |
 
 *Batch 23F — BS Data Science*
 
